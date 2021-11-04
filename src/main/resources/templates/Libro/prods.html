@@ -13,24 +13,20 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Alumno</th>
-                        <th scope="col">Telefono</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Carrera</th>
+                        <th scope="col">Libro</th>
+                        <th scope="col">Editorial</th>
                         <th scope="col" colspan="2">Acción</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr th:each="prod :${prods}">
-                        <th scope="row" th:text="${prod.idalumno}"></th>
+                        <th scope="row" th:text="${prod.idlibro}"></th>
                         <td th:text="${prod.nombre}"></td>
-                        <td th:text="${prod.telefono}"></td>
-                        <td th:text="${prod.correo}"></td>
-                        <td th:text="${prod.carrera}"></td>
+                        <td th:text="${prod.editorial}"></td>
                         <td>
-                            <a href="#" th:href="@{'/editalum/' + ${prod.idalumno}}" class="text-success"><i class="far fa-edit"></i></a>
-                            <a href="#" th:href="@{'/delalum/' + ${prod.idalumno}}" class="text-danger"><i class="fas fa-trash-alt"></i></a>
+                            <a href="#" th:href="@{'/editlibro/' + ${prod.idlibro}}" class="text-success"><i class="far fa-edit"></i></a>
+                            <a href="#" th:href="@{'/dellibro/' + ${prod.idlibro}}" class="text-danger"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 </tbody>

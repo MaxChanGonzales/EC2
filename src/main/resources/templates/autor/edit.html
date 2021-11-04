@@ -10,17 +10,18 @@
         <div class="container" style="max-width: 400px; margin-top: 50px">
             <div class="card">
                 <div class="card-header">
-                    Registrar Post
+                    Modificar Autor
                 </div>
                 <div class="card-body">
-                    <form action="/add" method="post">
+                    <form action="/autor/update" method="autor">
                         <div class="mb-3">
-                            <input type="text" class="form-control m-25" placeholder="titulo" name="titulo">
+                            <input type="text" class="form-control m-25" placeholder="nombres" name="nombres" th:value="${autor.nombres}" >
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" name="descripcion" placeholder="Descripción">        
+                            <input type="text" class="form-control" name="apellidos" placeholder="Apellidos" th:value="${autor.apellidos}" >        
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Guardar">
+                        <input type="hidden" name="id" th:value="${autor.idautor}" />
+                        <input type="submit" class="btn btn-primary" value="Actualizar">
                     </form>
                 </div>
             </div>

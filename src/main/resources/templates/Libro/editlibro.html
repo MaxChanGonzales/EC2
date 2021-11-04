@@ -1,0 +1,32 @@
+!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head th:replace="plantilla/plantilla::head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container" th:replace="plantilla/plantilla::menu"></div>
+        <div class="container" style="max-width: 400px; margin-top: 50px">
+            <div class="card">
+                <div class="card-header">
+                    Modificar Libro
+                </div>
+                <div class="card-body">
+                    <form action="/updatelibro" method="autor">
+                        <div class="mb-3">
+                            <select name="ideditorial" id="car" class="form-control">
+                                <option value="0">Seleccionar Editorial</option>                                
+                                <option th:each="car : ${cats}" th:value="${car.ideditorial}" th:text="${car.nombre}" th:selected="false"/>                              
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control m-25" placeholder="Libro" name="nombre" th:value="${prod.libro}" >
+                        </div>
+                        <input type="hidden" name="idlibro" th:value="${prod.idlibro}" />
+                        <input type="submit" name ="updatelibro" class="btn btn-primary" value="Actualizar">
+                    </form>
+                </div>
+            </div>
+    </body>
+</html>

@@ -10,21 +10,19 @@
         <div class="container" style="max-width: 400px; margin-top: 50px">
             <div class="card">
                 <div class="card-header">
-                    Modificar Post
+                    Registrar Autor
                 </div>
                 <div class="card-body">
-                    <form action="/post/update" method="post">
+                    <form action="/add" method="autors">
                         <div class="mb-3">
-                            <input type="text" class="form-control m-25" placeholder="titulo" name="titulo" th:value="${post.titulo}" >
+                            <input type="text" class="form-control m-25" placeholder="nombres" name="nombres">
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" name="descripcion" placeholder="Descripción" th:value="${post.descripcion}" >        
+                            <input type="text" class="form-control" name="apellidos" placeholder="Apellidos">        
                         </div>
-                        <input type="hidden" name="id" th:value="${post.idpost}" />
-                        <input type="submit" class="btn btn-primary" value="Actualizar">
+                        <input type="submit" class="btn btn-primary" value="Guardar">
                     </form>
                 </div>
             </div>
     </body>
 </html>
-

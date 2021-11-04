@@ -10,24 +10,18 @@
         <div class="container" style="max-width: 400px; margin-top: 50px">
             <div class="card">
                 <div class="card-header">
-                    Registrar Post
+                    Registrar Libro
                 </div>
                 <div class="card-body">
-                    <form action="/prodadd" method="post">
+                    <form action="/prodadd" method="autor">
                         <div class="mb-3">
                             <select name="idcar" id="cat" class="form-control">
-                                <option value="0">Seleccionar Carrera</option>                                
-                                <option th:each="car : ${cats}" th:value="${car.idcarrera}" th:text="${car.nombre}" th:selected="false"/>                              
+                                <option value="0">Seleccionar Editorial</option>                                
+                                <option th:each="car : ${cats}" th:value="${car.ideditorial}" th:text="${car.nombre}" th:selected="false"/>                              
                             </select>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control m-25" placeholder="Alumno" name="nombre">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" name="telefono" placeholder="Telefono">        
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" name="correo" placeholder="Correo">        
+                            <input type="text" class="form-control m-25" placeholder="Libro" name="nombre">
                         </div>
                         <input type="submit" class="btn btn-primary" value="Guardar">
                     </form>
